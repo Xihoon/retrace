@@ -1,0 +1,73 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js flipper-pkg bundle
+
+PATH: 
+  C:\Users\xihoo\AppData\Roaming\npm;C:\Program Files\nodejs\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Android\platform-tools;C:\Program Files (x86)\Java\jre1.8.0_301\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Users\xihoo\AppData\Local\Microsoft\WindowsApps;C:\Users\xihoo\AppData\Local\Yarn\bin;C:\Users\xihoo\AppData\Roaming\npm
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  14.17.6
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: C:\Flipper\FlipperPlugins\flipper-plugin-first\package.json: Unexpected string in JSON at position 280
+      at JSON.parse (<anonymous>)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (C:\Program Files (x86)\Yarn\lib\cli.js:310:30)
+      at C:\Program Files (x86)\Yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "$schema": "https://fbflipper.com/schemas/plugin-package/v2.json",
+    "name": "flipper-plugin-first",
+    "id": "First",
+    "version": "1.0.0",
+    "pluginType": "device",
+    "supportedDevices": [
+      {"os": "Windows", "archived": false},
+  	{"os": "Android", "archived": false}
+    ]
+    "main": "dist/bundle.js",
+    "flipperBundlerEntry": "src/index.tsx",
+    "license": "MIT",
+    "keywords": [
+      "flipper-plugin"
+    ],
+    "icon": "apps",
+    "title": "First",
+    "scripts": {
+      "lint": "flipper-pkg lint",
+      "prepack": "flipper-pkg lint && flipper-pkg bundle",
+      "build": "flipper-pkg bundle",
+      "watch": "flipper-pkg bundle --watch",
+      "test": "jest --no-watchman"
+    },
+    "peerDependencies": {
+      "flipper-plugin": "^0.100.0",
+      "antd": "latest"
+    },
+    "devDependencies": {
+      "@babel/preset-react": "latest",
+      "@babel/preset-typescript": "latest",
+      "@testing-library/react": "latest",
+      "@types/jest": "latest",
+      "@types/react": "latest",
+      "@types/react-dom": "latest",
+      "antd": "latest",
+      "flipper-plugin": "latest",
+      "flipper-pkg": "latest",
+      "jest": "latest",
+      "typescript": "latest"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
